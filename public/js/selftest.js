@@ -105,6 +105,7 @@ function checkStatus(url, hideUnknown=false) {
                 default:
                     if (xhr.status === 0 && xhr.statusText == "") {
                         log("Request was blocked by the browser!")
+                        log("Can not connect to the internet outside StuSta. Have you registered at reg.stustanet.de?")
                     } else {
                         log(xhr.status + " " + xhr.statusText);
                         let problem = xhr.getResponseHeader('x-ssn-problem');
